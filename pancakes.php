@@ -59,7 +59,7 @@ function deleteComments($conn){
         $cid = $_POST['cid'];
         $sql = "DELETE FROM comments2 WHERE cid='$cid'";
         $result = $conn->query($sql);
-        header("Location: meatballs.php");
+        header("Location: pancakes.php");
     }
 }
 ?>

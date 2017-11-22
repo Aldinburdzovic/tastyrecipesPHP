@@ -1,10 +1,11 @@
 <?php
     session_start();
     date_default_timezone_set('Europe/Stockholm');
+    
     $dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "root";
-$dbName = "tastyrecipes";
+    $dbUsername = "root";
+    $dbPassword = "root";
+    $dbName = "tastyrecipes";
 
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
@@ -118,7 +119,7 @@ function deleteComments($conn){
 			
                         <?php
                         if (isset($_SESSION['u_id'])) {
-				echo "<form method='POST' action='".setComments($conn)."'>
+				echo "<form action='includes/comments.inc.php' method='POST'>
                             <input type='hidden' name='uid' value='".$_SESSION['u_id']."'>
                             <input type='hidden' name='date' value='".date('Y-m-d H:i:s')."'>
                             <textarea name='message'></textarea><br>

@@ -16,12 +16,11 @@ function setComments($conn){
         $sql = "INSERT INTO comments (uid, date, message) VALUES ('$uid', '$date', '$message')";
         $result = $conn->query($sql);
         
-        header("Location: ../meatballs.php?comment=success");
+        header("Location: ../pancakes.php?comment=success");
 	exit();
     }
     else{
-        header("Location: ../meatballs.php?comment=error");
+        header("Location: ../pancakes.php?comment=error");
 	exit();
     }
 }
-
